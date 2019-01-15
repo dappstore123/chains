@@ -5,7 +5,7 @@ Listed by chainId according to EIP-155
 Data source available on `_data/chains.json`
 
 Example Format
-```
+```json
 {
   "name": "Ethereum Mainnet",
   "short_name": "eth",
