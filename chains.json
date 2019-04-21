@@ -2,10 +2,10 @@
 layout: none
 permalink: chains.json
 ---
-[{% for json in site.data.chains %}{% assign chain = json[1] %}
+[{% for chain in site.chains %}
   {
     "name": "{{ chain.name }}",
-    "chain_id": "{{ chain.chain_id }}",
+    "chain_id": "{{ chain.slug }}",
     "short_name": "{{ chain.short_name }}",
     "chain": "{{ chain.chain }}",
     "network": "{{ chain.network }}",

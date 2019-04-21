@@ -13,6 +13,18 @@ kramdown:
 # theme: just-the-docs
 plugins:
   - jekyll-feed
+  
+collections:
+  chains:
+    output: true
+    
+defaults:
+  - scope:
+      path: ""
+      type: chains
+    values:
+      layout: chainjson
+      permalink: /chains/:slug.json
 
 # --- just-the-docs theme ---
 

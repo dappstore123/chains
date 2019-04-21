@@ -8,7 +8,9 @@ nav_order: 1
 
 A list of EVM networks. Wallets and Web3 middleware providers should be able to use the appropriate Chain ID and Network ID to connect to the correct chain.
 
-This table is also available as a JSON feed at [chains.json](/chains.json).
+This table is also available as a JSON feed at [chains.json](/chains.json). Individual networks are available at <code>/chains/&laquo;chainid&raquo;.json</code>, and you can browse them in block format on the [chains page](/chains/).
+
+## Chain List
 
 <table>
   <tr>
@@ -19,10 +21,9 @@ This table is also available as a JSON feed at [chains.json](/chains.json).
     <th>Network</th>
     <th>Network ID</th>
   </tr>
-{% for json in site.data.chains %}
-  {% assign chain = json[1] %}
+{% for chain in site.chains %}{% comment %}<!-- Look up sort format and sort by Chain ID aka slug -->{% endcomment %}
   <tr>
-    <td>{{ chain.chain_id }}</td>
+    <td>{{ chain.slug }}</td>
     <td>{{ chain.name }}</td>
     <td>{{ chain.short_name }}</td>
     <td>{{ chain.chain }}</td>
